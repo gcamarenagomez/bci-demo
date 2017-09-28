@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SalesforceSDKCore/SFRestAPI.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <SFRestDelegate> {
+    
+    NSMutableArray *dataRows;
+    
+}
 
+@property (nonatomic, strong) NSArray *dataRows;
 
 @end
-

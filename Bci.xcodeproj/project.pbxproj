@@ -9,12 +9,55 @@
 /* Begin PBXBuildFile section */
 		876860F11F7BE2D5008A4C99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 876860F01F7BE2D5008A4C99 /* AppDelegate.m */; };
 		876860F41F7BE2D6008A4C99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 876860F31F7BE2D6008A4C99 /* ViewController.m */; };
-		876860F71F7BE2D6008A4C99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876860F51F7BE2D6008A4C99 /* Main.storyboard */; };
 		876860F91F7BE2D6008A4C99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876860F81F7BE2D6008A4C99 /* Assets.xcassets */; };
 		876860FC1F7BE2D6008A4C99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876860FA1F7BE2D6008A4C99 /* LaunchScreen.storyboard */; };
 		876860FF1F7BE2D6008A4C99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 876860FE1F7BE2D6008A4C99 /* main.m */; };
 		876861091F7BE2D6008A4C99 /* BciTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 876861081F7BE2D6008A4C99 /* BciTests.m */; };
 		876861141F7BE2D6008A4C99 /* BciUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 876861131F7BE2D6008A4C99 /* BciUITests.m */; };
+		876861271F7BE3CF008A4C99 /* ServiceKnowledge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876861221F7BE3C9008A4C99 /* ServiceKnowledge.framework */; };
+		876861281F7BE3CF008A4C99 /* ServiceKnowledge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 876861221F7BE3C9008A4C99 /* ServiceKnowledge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		876861291F7BE3CF008A4C99 /* ServiceCases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876861231F7BE3CA008A4C99 /* ServiceCases.framework */; };
+		8768612A1F7BE3CF008A4C99 /* ServiceCases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 876861231F7BE3CA008A4C99 /* ServiceCases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8768612B1F7BE3CF008A4C99 /* ServiceChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876861241F7BE3CA008A4C99 /* ServiceChat.framework */; };
+		8768612C1F7BE3CF008A4C99 /* ServiceChat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 876861241F7BE3CA008A4C99 /* ServiceChat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8768612D1F7BE3CF008A4C99 /* ServiceSOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876861251F7BE3CE008A4C99 /* ServiceSOS.framework */; };
+		8768612E1F7BE3CF008A4C99 /* ServiceSOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 876861251F7BE3CE008A4C99 /* ServiceSOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8768612F1F7BE3CF008A4C99 /* ServiceCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876861261F7BE3CF008A4C99 /* ServiceCore.framework */; };
+		876861301F7BE3CF008A4C99 /* ServiceCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 876861261F7BE3CF008A4C99 /* ServiceCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		876861361F7BE46C008A4C99 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876861321F7BE46A008A4C99 /* CocoaLumberjack.framework */; };
+		876861371F7BE46C008A4C99 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 876861321F7BE46A008A4C99 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		876861381F7BE46C008A4C99 /* SmartStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876861331F7BE46B008A4C99 /* SmartStore.framework */; };
+		876861391F7BE46C008A4C99 /* SmartStore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 876861331F7BE46B008A4C99 /* SmartStore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8768613A1F7BE46C008A4C99 /* SalesforceAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876861341F7BE46B008A4C99 /* SalesforceAnalytics.framework */; };
+		8768613B1F7BE46C008A4C99 /* SalesforceAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 876861341F7BE46B008A4C99 /* SalesforceAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8768613C1F7BE46C008A4C99 /* SalesforceSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876861351F7BE46C008A4C99 /* SalesforceSDKCore.framework */; };
+		8768613D1F7BE46C008A4C99 /* SalesforceSDKCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 876861351F7BE46C008A4C99 /* SalesforceSDKCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		876861511F7BF589008A4C99 /* libJB4ASDK-4.9.5.20900000.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 876861501F7BF589008A4C99 /* libJB4ASDK-4.9.5.20900000.a */; };
+		876861541F7BFBF2008A4C99 /* AppDelegate+ETPushConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 876861531F7BFBF2008A4C99 /* AppDelegate+ETPushConstants.m */; };
+		876861571F7BFC96008A4C99 /* AppDelegate+ETPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 876861561F7BFC96008A4C99 /* AppDelegate+ETPush.m */; };
+		8768615A1F7BFDF0008A4C99 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876861591F7BFDF0008A4C99 /* WebKit.framework */; };
+		8768C5DF1F7C14D4008EC538 /* bciLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5DE1F7C14D4008EC538 /* bciLogo.png */; };
+		8768C5EE1F7C1569008EC538 /* Progreso4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5E01F7C1565008EC538 /* Progreso4.png */; };
+		8768C5EF1F7C1569008EC538 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5E11F7C1565008EC538 /* bg.jpg */; };
+		8768C5F01F7C1569008EC538 /* Lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5E21F7C1565008EC538 /* Lock.png */; };
+		8768C5F11F7C1569008EC538 /* monologos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5E31F7C1566008EC538 /* monologos.jpeg */; };
+		8768C5F21F7C1569008EC538 /* Contacto.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5E41F7C1566008EC538 /* Contacto.png */; };
+		8768C5F31F7C1569008EC538 /* monologos.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5E51F7C1566008EC538 /* monologos.png */; };
+		8768C5F41F7C1569008EC538 /* Sucursal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5E61F7C1567008EC538 /* Sucursal.png */; };
+		8768C5F51F7C1569008EC538 /* Cajero.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5E71F7C1567008EC538 /* Cajero.png */; };
+		8768C5F61F7C1569008EC538 /* Progreso2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5E81F7C1567008EC538 /* Progreso2.png */; };
+		8768C5F71F7C1569008EC538 /* Progreso3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5E91F7C1568008EC538 /* Progreso3.png */; };
+		8768C5F81F7C1569008EC538 /* Emergencias.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5EA1F7C1568008EC538 /* Emergencias.png */; };
+		8768C5F91F7C1569008EC538 /* graciasBci.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5EB1F7C1568008EC538 /* graciasBci.png */; };
+		8768C5FA1F7C1569008EC538 /* Progreso.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5EC1F7C1569008EC538 /* Progreso.png */; };
+		8768C5FB1F7C1569008EC538 /* monologo_bci.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5ED1F7C1569008EC538 /* monologo_bci.png */; };
+		8768C5FD1F7C1591008EC538 /* information.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5FC1F7C1591008EC538 /* information.png */; };
+		8768C5FF1F7C1A7E008EC538 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C5FE1F7C1A7C008EC538 /* line.png */; };
+		8768C6011F7C1AD3008EC538 /* Plan.png in Resources */ = {isa = PBXBuildFile; fileRef = 8768C6001F7C1AD2008EC538 /* Plan.png */; };
+		8768C6041F7D701D008EC538 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8768C6031F7D701D008EC538 /* InitialViewController.m */; };
+		878440BA1F7C0841004439AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878440B91F7C0841004439AF /* Main.storyboard */; };
+		878440BE1F7C1113004439AF /* Supporting Files in Resources */ = {isa = PBXBuildFile; fileRef = 878440BD1F7C1113004439AF /* Supporting Files */; };
+		878440C01F7C1132004439AF /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 878440BF1F7C1132004439AF /* Fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,13 +77,34 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		876861311F7BE3CF008A4C99 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8768613D1F7BE46C008A4C99 /* SalesforceSDKCore.framework in Embed Frameworks */,
+				8768613B1F7BE46C008A4C99 /* SalesforceAnalytics.framework in Embed Frameworks */,
+				876861301F7BE3CF008A4C99 /* ServiceCore.framework in Embed Frameworks */,
+				8768612C1F7BE3CF008A4C99 /* ServiceChat.framework in Embed Frameworks */,
+				8768612A1F7BE3CF008A4C99 /* ServiceCases.framework in Embed Frameworks */,
+				8768612E1F7BE3CF008A4C99 /* ServiceSOS.framework in Embed Frameworks */,
+				876861371F7BE46C008A4C99 /* CocoaLumberjack.framework in Embed Frameworks */,
+				876861391F7BE46C008A4C99 /* SmartStore.framework in Embed Frameworks */,
+				876861281F7BE3CF008A4C99 /* ServiceKnowledge.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		876860EC1F7BE2D5008A4C99 /* Bci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bci.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		876860EF1F7BE2D5008A4C99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		876860F01F7BE2D5008A4C99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		876860F21F7BE2D6008A4C99 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		876860F31F7BE2D6008A4C99 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		876860F61F7BE2D6008A4C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		876860F81F7BE2D6008A4C99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		876860FB1F7BE2D6008A4C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		876860FD1F7BE2D6008A4C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +115,62 @@
 		8768610F1F7BE2D6008A4C99 /* BciUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BciUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		876861131F7BE2D6008A4C99 /* BciUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BciUITests.m; sourceTree = "<group>"; };
 		876861151F7BE2D6008A4C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		876861211F7BE2EE008A4C99 /* Bci.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bci.entitlements; sourceTree = "<group>"; };
+		876861221F7BE3C9008A4C99 /* ServiceKnowledge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ServiceKnowledge.framework; sourceTree = "<group>"; };
+		876861231F7BE3CA008A4C99 /* ServiceCases.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ServiceCases.framework; sourceTree = "<group>"; };
+		876861241F7BE3CA008A4C99 /* ServiceChat.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ServiceChat.framework; sourceTree = "<group>"; };
+		876861251F7BE3CE008A4C99 /* ServiceSOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ServiceSOS.framework; sourceTree = "<group>"; };
+		876861261F7BE3CF008A4C99 /* ServiceCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ServiceCore.framework; sourceTree = "<group>"; };
+		876861321F7BE46A008A4C99 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = "<group>"; };
+		876861331F7BE46B008A4C99 /* SmartStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartStore.framework; sourceTree = "<group>"; };
+		876861341F7BE46B008A4C99 /* SalesforceAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SalesforceAnalytics.framework; sourceTree = "<group>"; };
+		876861351F7BE46C008A4C99 /* SalesforceSDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SalesforceSDKCore.framework; sourceTree = "<group>"; };
+		8768613F1F7BF561008A4C99 /* ETLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLocationManager.h; sourceTree = "<group>"; };
+		876861401F7BF561008A4C99 /* ETRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETRegion.h; sourceTree = "<group>"; };
+		876861411F7BF561008A4C99 /* ETEventMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETEventMessage.h; sourceTree = "<group>"; };
+		876861421F7BF561008A4C99 /* PICart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PICart.h; sourceTree = "<group>"; };
+		876861431F7BF561008A4C99 /* ExactTargetEnhancedPushDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExactTargetEnhancedPushDataSource.h; sourceTree = "<group>"; };
+		876861441F7BF561008A4C99 /* ETWKLandingPagePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETWKLandingPagePresenter.h; sourceTree = "<group>"; };
+		876861451F7BF561008A4C99 /* ETMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETMessage.h; sourceTree = "<group>"; };
+		876861461F7BF561008A4C99 /* PushConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushConstants.h; sourceTree = "<group>"; };
+		876861471F7BF562008A4C99 /* ETPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPush.h; sourceTree = "<group>"; };
+		876861481F7BF562008A4C99 /* PICartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PICartItem.h; sourceTree = "<group>"; };
+		876861491F7BF562008A4C99 /* ETAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAnalytics.h; sourceTree = "<group>"; };
+		8768614A1F7BF562008A4C99 /* PIOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIOrder.h; sourceTree = "<group>"; };
+		8768614B1F7BF562008A4C99 /* ETCloudPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETCloudPage.h; sourceTree = "<group>"; };
+		8768614C1F7BF562008A4C99 /* ETCloudPageDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETCloudPageDataSource.h; sourceTree = "<group>"; };
+		8768614D1F7BF562008A4C99 /* ETEventRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETEventRegion.h; sourceTree = "<group>"; };
+		8768614E1F7BF563008A4C99 /* ETLandingPagePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETLandingPagePresenter.h; sourceTree = "<group>"; };
+		8768614F1F7BF563008A4C99 /* ETGenericUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETGenericUpdate.h; sourceTree = "<group>"; };
+		876861501F7BF589008A4C99 /* libJB4ASDK-4.9.5.20900000.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libJB4ASDK-4.9.5.20900000.a"; sourceTree = "<group>"; };
+		876861521F7BFBC2008A4C99 /* AppDelegate+ETPushConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ETPushConstants.h"; sourceTree = "<group>"; };
+		876861531F7BFBF2008A4C99 /* AppDelegate+ETPushConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ETPushConstants.m"; sourceTree = "<group>"; };
+		876861551F7BFC2C008A4C99 /* AppDelegate+ETPush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ETPush.h"; sourceTree = "<group>"; };
+		876861561F7BFC96008A4C99 /* AppDelegate+ETPush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ETPush.m"; sourceTree = "<group>"; };
+		876861591F7BFDF0008A4C99 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		8768C5DE1F7C14D4008EC538 /* bciLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bciLogo.png; sourceTree = "<group>"; };
+		8768C5E01F7C1565008EC538 /* Progreso4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Progreso4.png; sourceTree = "<group>"; };
+		8768C5E11F7C1565008EC538 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		8768C5E21F7C1565008EC538 /* Lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lock.png; sourceTree = "<group>"; };
+		8768C5E31F7C1566008EC538 /* monologos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = monologos.jpeg; sourceTree = "<group>"; };
+		8768C5E41F7C1566008EC538 /* Contacto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Contacto.png; sourceTree = "<group>"; };
+		8768C5E51F7C1566008EC538 /* monologos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monologos.png; sourceTree = "<group>"; };
+		8768C5E61F7C1567008EC538 /* Sucursal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sucursal.png; sourceTree = "<group>"; };
+		8768C5E71F7C1567008EC538 /* Cajero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cajero.png; sourceTree = "<group>"; };
+		8768C5E81F7C1567008EC538 /* Progreso2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Progreso2.png; sourceTree = "<group>"; };
+		8768C5E91F7C1568008EC538 /* Progreso3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Progreso3.png; sourceTree = "<group>"; };
+		8768C5EA1F7C1568008EC538 /* Emergencias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Emergencias.png; sourceTree = "<group>"; };
+		8768C5EB1F7C1568008EC538 /* graciasBci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graciasBci.png; sourceTree = "<group>"; };
+		8768C5EC1F7C1569008EC538 /* Progreso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Progreso.png; sourceTree = "<group>"; };
+		8768C5ED1F7C1569008EC538 /* monologo_bci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monologo_bci.png; sourceTree = "<group>"; };
+		8768C5FC1F7C1591008EC538 /* information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = information.png; sourceTree = "<group>"; };
+		8768C5FE1F7C1A7C008EC538 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
+		8768C6001F7C1AD2008EC538 /* Plan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plan.png; sourceTree = "<group>"; };
+		8768C6021F7D6FEA008EC538 /* InitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		8768C6031F7D701D008EC538 /* InitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
+		878440B91F7C0841004439AF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		878440BD1F7C1113004439AF /* Supporting Files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Supporting Files"; sourceTree = "<group>"; };
+		878440BF1F7C1132004439AF /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +178,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8768615A1F7BFDF0008A4C99 /* WebKit.framework in Frameworks */,
+				8768613C1F7BE46C008A4C99 /* SalesforceSDKCore.framework in Frameworks */,
+				8768613A1F7BE46C008A4C99 /* SalesforceAnalytics.framework in Frameworks */,
+				8768612F1F7BE3CF008A4C99 /* ServiceCore.framework in Frameworks */,
+				8768612B1F7BE3CF008A4C99 /* ServiceChat.framework in Frameworks */,
+				876861511F7BF589008A4C99 /* libJB4ASDK-4.9.5.20900000.a in Frameworks */,
+				876861291F7BE3CF008A4C99 /* ServiceCases.framework in Frameworks */,
+				8768612D1F7BE3CF008A4C99 /* ServiceSOS.framework in Frameworks */,
+				876861361F7BE46C008A4C99 /* CocoaLumberjack.framework in Frameworks */,
+				876861381F7BE46C008A4C99 /* SmartStore.framework in Frameworks */,
+				876861271F7BE3CF008A4C99 /* ServiceKnowledge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +212,22 @@
 		876860E31F7BE2D5008A4C99 = {
 			isa = PBXGroup;
 			children = (
+				878440BF1F7C1132004439AF /* Fonts */,
+				878440BD1F7C1113004439AF /* Supporting Files */,
+				876861321F7BE46A008A4C99 /* CocoaLumberjack.framework */,
+				876861341F7BE46B008A4C99 /* SalesforceAnalytics.framework */,
+				876861351F7BE46C008A4C99 /* SalesforceSDKCore.framework */,
+				876861331F7BE46B008A4C99 /* SmartStore.framework */,
+				876861231F7BE3CA008A4C99 /* ServiceCases.framework */,
+				876861241F7BE3CA008A4C99 /* ServiceChat.framework */,
+				876861261F7BE3CF008A4C99 /* ServiceCore.framework */,
+				876861221F7BE3C9008A4C99 /* ServiceKnowledge.framework */,
+				876861251F7BE3CE008A4C99 /* ServiceSOS.framework */,
 				876860EE1F7BE2D5008A4C99 /* Bci */,
 				876861071F7BE2D6008A4C99 /* BciTests */,
 				876861121F7BE2D6008A4C99 /* BciUITests */,
 				876860ED1F7BE2D5008A4C99 /* Products */,
+				876861581F7BFDF0008A4C99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +244,41 @@
 		876860EE1F7BE2D5008A4C99 /* Bci */ = {
 			isa = PBXGroup;
 			children = (
+				8768C5DD1F7C14A4008EC538 /* Supporting Files */,
+				878440B91F7C0841004439AF /* Main.storyboard */,
+				876861501F7BF589008A4C99 /* libJB4ASDK-4.9.5.20900000.a */,
+				876861491F7BF562008A4C99 /* ETAnalytics.h */,
+				8768614B1F7BF562008A4C99 /* ETCloudPage.h */,
+				8768614C1F7BF562008A4C99 /* ETCloudPageDataSource.h */,
+				876861411F7BF561008A4C99 /* ETEventMessage.h */,
+				8768614D1F7BF562008A4C99 /* ETEventRegion.h */,
+				8768614F1F7BF563008A4C99 /* ETGenericUpdate.h */,
+				8768614E1F7BF563008A4C99 /* ETLandingPagePresenter.h */,
+				8768613F1F7BF561008A4C99 /* ETLocationManager.h */,
+				876861451F7BF561008A4C99 /* ETMessage.h */,
+				876861471F7BF562008A4C99 /* ETPush.h */,
+				876861401F7BF561008A4C99 /* ETRegion.h */,
+				876861441F7BF561008A4C99 /* ETWKLandingPagePresenter.h */,
+				876861431F7BF561008A4C99 /* ExactTargetEnhancedPushDataSource.h */,
+				876861421F7BF561008A4C99 /* PICart.h */,
+				876861481F7BF562008A4C99 /* PICartItem.h */,
+				8768614A1F7BF562008A4C99 /* PIOrder.h */,
+				876861461F7BF561008A4C99 /* PushConstants.h */,
+				876861211F7BE2EE008A4C99 /* Bci.entitlements */,
 				876860EF1F7BE2D5008A4C99 /* AppDelegate.h */,
 				876860F01F7BE2D5008A4C99 /* AppDelegate.m */,
 				876860F21F7BE2D6008A4C99 /* ViewController.h */,
 				876860F31F7BE2D6008A4C99 /* ViewController.m */,
-				876860F51F7BE2D6008A4C99 /* Main.storyboard */,
 				876860F81F7BE2D6008A4C99 /* Assets.xcassets */,
 				876860FA1F7BE2D6008A4C99 /* LaunchScreen.storyboard */,
 				876860FD1F7BE2D6008A4C99 /* Info.plist */,
 				876860FE1F7BE2D6008A4C99 /* main.m */,
+				876861521F7BFBC2008A4C99 /* AppDelegate+ETPushConstants.h */,
+				876861531F7BFBF2008A4C99 /* AppDelegate+ETPushConstants.m */,
+				876861551F7BFC2C008A4C99 /* AppDelegate+ETPush.h */,
+				876861561F7BFC96008A4C99 /* AppDelegate+ETPush.m */,
+				8768C6021F7D6FEA008EC538 /* InitialViewController.h */,
+				8768C6031F7D701D008EC538 /* InitialViewController.m */,
 			);
 			path = Bci;
 			sourceTree = "<group>";
@@ -132,6 +301,39 @@
 			path = BciUITests;
 			sourceTree = "<group>";
 		};
+		876861581F7BFDF0008A4C99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				876861591F7BFDF0008A4C99 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8768C5DD1F7C14A4008EC538 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8768C6001F7C1AD2008EC538 /* Plan.png */,
+				8768C5FE1F7C1A7C008EC538 /* line.png */,
+				8768C5FC1F7C1591008EC538 /* information.png */,
+				8768C5E11F7C1565008EC538 /* bg.jpg */,
+				8768C5E71F7C1567008EC538 /* Cajero.png */,
+				8768C5E41F7C1566008EC538 /* Contacto.png */,
+				8768C5EA1F7C1568008EC538 /* Emergencias.png */,
+				8768C5EB1F7C1568008EC538 /* graciasBci.png */,
+				8768C5E21F7C1565008EC538 /* Lock.png */,
+				8768C5ED1F7C1569008EC538 /* monologo_bci.png */,
+				8768C5E31F7C1566008EC538 /* monologos.jpeg */,
+				8768C5E51F7C1566008EC538 /* monologos.png */,
+				8768C5EC1F7C1569008EC538 /* Progreso.png */,
+				8768C5E81F7C1567008EC538 /* Progreso2.png */,
+				8768C5E91F7C1568008EC538 /* Progreso3.png */,
+				8768C5E01F7C1565008EC538 /* Progreso4.png */,
+				8768C5E61F7C1567008EC538 /* Sucursal.png */,
+				8768C5DE1F7C14D4008EC538 /* bciLogo.png */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +344,8 @@
 				876860E81F7BE2D5008A4C99 /* Sources */,
 				876860E91F7BE2D5008A4C99 /* Frameworks */,
 				876860EA1F7BE2D5008A4C99 /* Resources */,
+				876861311F7BE3CF008A4C99 /* Embed Frameworks */,
+				8768613E1F7BE513008A4C99 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -200,6 +404,14 @@
 					876860EB1F7BE2D5008A4C99 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					876861031F7BE2D6008A4C99 = {
 						CreatedOnToolsVersion = 9.0;
@@ -238,9 +450,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8768C5F01F7C1569008EC538 /* Lock.png in Resources */,
+				8768C5F91F7C1569008EC538 /* graciasBci.png in Resources */,
+				8768C5FB1F7C1569008EC538 /* monologo_bci.png in Resources */,
+				8768C5FD1F7C1591008EC538 /* information.png in Resources */,
+				8768C5F81F7C1569008EC538 /* Emergencias.png in Resources */,
+				8768C5F31F7C1569008EC538 /* monologos.png in Resources */,
+				878440C01F7C1132004439AF /* Fonts in Resources */,
+				8768C5EE1F7C1569008EC538 /* Progreso4.png in Resources */,
+				8768C5F71F7C1569008EC538 /* Progreso3.png in Resources */,
+				8768C5F11F7C1569008EC538 /* monologos.jpeg in Resources */,
+				8768C6011F7C1AD3008EC538 /* Plan.png in Resources */,
+				878440BA1F7C0841004439AF /* Main.storyboard in Resources */,
+				8768C5F41F7C1569008EC538 /* Sucursal.png in Resources */,
 				876860FC1F7BE2D6008A4C99 /* LaunchScreen.storyboard in Resources */,
+				8768C5F21F7C1569008EC538 /* Contacto.png in Resources */,
+				8768C5F61F7C1569008EC538 /* Progreso2.png in Resources */,
+				878440BE1F7C1113004439AF /* Supporting Files in Resources */,
+				8768C5FA1F7C1569008EC538 /* Progreso.png in Resources */,
+				8768C5FF1F7C1A7E008EC538 /* line.png in Resources */,
 				876860F91F7BE2D6008A4C99 /* Assets.xcassets in Resources */,
-				876860F71F7BE2D6008A4C99 /* Main.storyboard in Resources */,
+				8768C5EF1F7C1569008EC538 /* bg.jpg in Resources */,
+				8768C5DF1F7C14D4008EC538 /* bciLogo.png in Resources */,
+				8768C5F51F7C1569008EC538 /* Cajero.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,12 +492,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8768613E1F7BE513008A4C99 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/ServiceCore.framework/prepare-framework\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		876860E81F7BE2D5008A4C99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				876860F41F7BE2D6008A4C99 /* ViewController.m in Sources */,
+				876861571F7BFC96008A4C99 /* AppDelegate+ETPush.m in Sources */,
+				876861541F7BFBF2008A4C99 /* AppDelegate+ETPushConstants.m in Sources */,
+				8768C6041F7D701D008EC538 /* InitialViewController.m in Sources */,
 				876860FF1F7BE2D6008A4C99 /* main.m in Sources */,
 				876860F11F7BE2D5008A4C99 /* AppDelegate.m in Sources */,
 			);
@@ -303,14 +554,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		876860F51F7BE2D6008A4C99 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				876860F61F7BE2D6008A4C99 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		876860FA1F7BE2D6008A4C99 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -430,10 +673,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Bci/Bci.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S3K3BDMHWT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Bci/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Bci",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sf.Bci;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -444,10 +696,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Bci/Bci.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S3K3BDMHWT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Bci/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Bci",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sf.Bci;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

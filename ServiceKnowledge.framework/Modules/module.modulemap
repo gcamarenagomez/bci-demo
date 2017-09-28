@@ -1,0 +1,30 @@
+framework module ServiceKnowledge {
+    umbrella header "ServiceKnowledge.h"
+
+    export *
+    module * { export * }
+
+    framework module KnowledgeCore {
+        umbrella header "KnowledgeCore.h"
+        export *
+        module * { export * }
+    }
+
+    framework module KnowledgeUI {
+        umbrella header "KnowledgeUI.h"
+        export *
+        module * { export * }
+    }
+
+    link framework "UIKit"
+    link framework "SystemConfiguration"
+    link framework "CoreGraphics"
+
+    link "System"
+    link "sqlite3"
+    link "z"
+
+    use SalesforceSDKCore
+    use SalesforceAnalytics
+    use ServiceCore
+}
