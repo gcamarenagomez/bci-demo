@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-//#import "AppDelegate+ETPush.h"
+#import "AppDelegate+ETPush.h"
 #import "InitialViewController.h"
 #import "ViewController.h"
 @import ServiceCore;
@@ -20,6 +20,7 @@
 #import <SalesforceSDKCore/SFUserAccountManager.h>
 #import <SmartStore/SalesforceSDKManagerWithSmartStore.h>
 #import <SalesforceSDKCore/SFLoginViewController.h>
+
 
 static NSString * const RemoteAccessConsumerKey = @"3MVG9g9rbsTkKnAXrtKvJJXtmvsgz83EFrR0GVw7eunHqJldAydGcQYyBzTxPWNeRUcGkaTIeYhfjuLa5FrO.";
 static NSString * const OAuthRedirectURI        = @"mysampleapp://auth/success";
@@ -43,7 +44,7 @@ static NSString * const OAuthRedirectURI        = @"mysampleapp://auth/success";
 
 @synthesize window = _window;
 
-- (id)init{
+/*- (id)init{
     self = [super init];
     if(self){
         //[SFAuthenticationManager sharedManager].advancedAuthConfiguration = SFOAuthAdvancedAuthConfigurationRequire;
@@ -54,8 +55,8 @@ static NSString * const OAuthRedirectURI        = @"mysampleapp://auth/success";
         
         __weak AppDelegate *weakSelf = self;
         [SalesforceSDKManager sharedManager].postLaunchAction = ^(SFSDKLaunchAction launchActionList){
-            
-            [[SFPushNotificationManager sharedInstance] registerForRemoteNotifications];
+            [self registerForRemoteNotifications];
+            //[[SFPushNotificationManager sharedInstance] registerForRemoteNotifications];
             [weakSelf setupRootViewController];
         };
         [SalesforceSDKManager sharedManager].launchErrorAction = ^(NSError *error, SFSDKLaunchAction launchActionList){
@@ -70,17 +71,19 @@ static NSString * const OAuthRedirectURI        = @"mysampleapp://auth/success";
         };
     }
     return self;
-}
+}*/
+
+#define SYSTEM_VERSION_GRATERTHAN_OR_EQUALTO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 // DO NOT COPY AND PASTE THIS DIRECTLY INTO YOUR APP DELEGATE.M FILE.
 // YOUR APPDELEGATE.M FILE ALREADY CONTAINS THIS METHOD, YOU
 // ONLY NEED TO ADD THE CALL to the shouldInitETSDKWithOptions method below
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    [self initializeAppViewState];
+    //self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    //[self initializeAppViewState];
     // This line is a required addition to your AppDelegate.m's method of the same name.
     // it is responsible for the initialization of the SDK from our category.
-    //[self application:application shouldInitETSDKWithOptions:launchOptions];
+    [self application:application shouldInitETSDKWithOptions:launchOptions];
     
     SCSServiceConfiguration *config = [[SCSServiceConfiguration alloc]
                                        initWithCommunity:[NSURL URLWithString:@"https://sdodemo-main-15bf2838a3d-15e5d09798a.force.com/cumuluscommunity"]
@@ -91,27 +94,107 @@ static NSString * const OAuthRedirectURI        = @"mysampleapp://auth/success";
     [SCServiceCloud sharedInstance].serviceConfiguration = config;
     [[SalesforceSDKManager sharedManager] launch];
     
+    /*if(SYSTEM_VERSION_GRATERTHAN_OR_EQUALTO(@"10.0")){
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error){
+            if( !error ){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [[UIApplication sharedApplication] registerForRemoteNotifications];
+                });
+                
+            }
+        }];
+    }*/
     
     return YES;
 }
+/*- (void)registerForRemoteNotifications {
+    if(SYSTEM_VERSION_GRATERTHAN_OR_EQUALTO(@"10.0")){
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error){
+            if(!error){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [[UIApplication sharedApplication] registerForRemoteNotifications];
+                });
+            }
+        }];
+    }
+    else {
+        // Code for old versions
+        UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                        UIUserNotificationTypeBadge |
+                                                        UIUserNotificationTypeSound);
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                                 categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        
+    }
+}*/
 
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+/*- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     [[SFPushNotificationManager sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+    NSString *str = [NSString stringWithFormat:@"Device Token=%@",deviceToken];
+    NSLog(@"This is device token%@", str);
     if ([SFUserAccountManager sharedInstance].currentUser.credentials.accessToken != nil) {
         [[SFPushNotificationManager sharedInstance] registerForSalesforceNotifications];
     }
-}
+}*/
 
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+/*- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+
+{
+    
+    NSString *tokenString = [deviceToken description];
+    tokenString = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    tokenString = [tokenString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSLog(@"Push Notification tokenstring is %@",tokenString);
+    
+    [[NSUserDefaults standardUserDefaults]setObject:tokenString forKey:@"DeviceTokenFinal"];
+    
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    if ([SFUserAccountManager sharedInstance].currentUser.credentials.accessToken != nil) {
+        [[SFPushNotificationManager sharedInstance] registerForSalesforceNotifications];
+    }
+    
+}*/
+
+/*- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
     // Respond to any push notification registration errors here.
-}
+    NSLog(@"This device failed to register with error: %@", error);
+}*/
 
-- (void)applicationWillResignActive:(UIApplication *)application {
+/*-(void) handleRemoteNotification:(UIApplication *) application   userInfo:(NSDictionary *) remoteNotif {
+    
+    NSLog(@"handleRemoteNotification");
+    
+    NSLog(@"Handle Remote Notification Dictionary: %@", remoteNotif);
+    
+    // Handle Click of the Push Notification From Here…
+    // You can write a code to redirect user to specific screen of the app here….
+    
+}*/
+
+/*- (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-}
+}*/
+
+//Called when a notification is delivered to a foreground app.
+/*-(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler{
+    NSLog(@"User Info : %@",notification.request.content.userInfo);
+    completionHandler(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge);
+}*/
+
+//Called to let your app know which action was selected by the user for a given notification.
+/*-(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler{
+    NSLog(@"User Info : %@",response.notification.request.content.userInfo);
+    completionHandler();
+}*/
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -137,7 +220,7 @@ static NSString * const OAuthRedirectURI        = @"mysampleapp://auth/success";
 #pragma mark - Private methods
 - (void)initializeAppViewState
 {
-    if (![NSThread isMainThread]) {
+    /*if (![NSThread isMainThread]) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self initializeAppViewState];
         });
@@ -145,32 +228,32 @@ static NSString * const OAuthRedirectURI        = @"mysampleapp://auth/success";
     }
     
     self.window.rootViewController = [[InitialViewController alloc] initWithNibName:nil bundle:nil];
-    [self.window makeKeyAndVisible];
+    [self.window makeKeyAndVisible];*/
 }
 
 - (void)setupRootViewController{
-    NSBundle *bundle = [NSBundle mainBundle];
+    /*NSBundle *bundle = [NSBundle mainBundle];
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:bundle];
     ViewController *rootVC = [sb instantiateInitialViewController];
     //ViewController *rootVC = [[ViewController alloc] initWithNibName:nil bundle:nil];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:rootVC];
-    self.window.rootViewController = rootVC;
+    
+    self.window.rootViewController = rootVC;*/
 }
 
 - (void)resetViewState:(void (^)(void))postResetBlock
 {
-    if ((self.window.rootViewController).presentedViewController) {
+    /*if ((self.window.rootViewController).presentedViewController) {
         [self.window.rootViewController dismissViewControllerAnimated:NO completion:^{
             postResetBlock();
         }];
     } else {
         postResetBlock();
-    }
+    }*/
 }
 
 - (void)handleSdkManagerLogout
 {
-    [self resetViewState:^{
+    /*[self resetViewState:^{
         [self initializeAppViewState];
         
         // Multi-user pattern:
@@ -194,16 +277,16 @@ static NSString * const OAuthRedirectURI        = @"mysampleapp://auth/success";
             
             [[SalesforceSDKManager sharedManager] launch];
         }
-    }];
+    }];*/
 }
 
 - (void)handleUserSwitch:(SFUserAccount *)fromUser
                   toUser:(SFUserAccount *)toUser
 {
-    [self resetViewState:^{
+    /*[self resetViewState:^{
         [self initializeAppViewState];
         [[SalesforceSDKManager sharedManager] launch];
-    }];
+    }];*/
 }
 
 

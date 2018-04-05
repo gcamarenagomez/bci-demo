@@ -12,10 +12,10 @@
 
 // Code@ AppIDs and Access Tokens for the debug and production versions of your app
 // These values should be stored securely by your application or retrieved from a remote server
-NSString *const kETAppID_Debug                       = @"fb24ddd7-1833-425e-a52a-906d92d9c362";
-NSString *const kETAccessToken_Debug                 = @"hdsmqfntpmjhzjfqvc4c243m";
-NSString *const kETAppID_Prod                        = @"fb24ddd7-1833-425e-a52a-906d92d9c362";
-NSString *const kETAccessToken_Prod                  = @"hdsmqfntpmjhzjfqvc4c243m";
+NSString *const kETAppID_Debug                       = @"063c6e5e-18b4-44ca-9b68-370b8ea0b301";
+NSString *const kETAccessToken_Debug                 = @"rap5cwdqx8cwcnz3r56mzsvv";
+NSString *const kETAppID_Prod                        = @"063c6e5e-18b4-44ca-9b68-370b8ea0b301";
+NSString *const kETAccessToken_Prod                  = @"rap5cwdqx8cwcnz3r56mzsvv";
 
 // Constants used for Strings
 NSString *const kMessageTypeLocation                 = @"Location";

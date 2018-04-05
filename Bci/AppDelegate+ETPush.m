@@ -24,7 +24,7 @@
     
     
     /**MC for push notifications*/
-    /*BOOL successful = NO;
+    BOOL successful = NO;
     NSError *error = nil;
     
     [[ETPush pushManager] setCloudPageWithAlertDelegate:self];
@@ -114,7 +114,7 @@
 
         [ETPush getSDKState];
         
-    }*/
+    }
     
     return YES;
 }
